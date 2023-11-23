@@ -5,13 +5,13 @@ namespace Asantibanez\LivewireSelect\Tests;
 use Asantibanez\LivewireSelect\LivewireSelect;
 use Illuminate\Foundation\Testing\WithFaker;
 use Livewire\LivewireManager;
-use Livewire\Testing\TestableLivewire;
+use Livewire\Features\SupportTesting\Testable;
 
 class LivewireSelectTest extends TestCase
 {
     use WithFaker;
 
-    private function createComponent($parameters) : TestableLivewire
+    private function createComponent($parameters) : Testable
     {
         return app(LivewireManager::class)->test(LivewireSelect::class, $parameters);
     }
